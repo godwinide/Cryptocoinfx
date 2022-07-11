@@ -15,7 +15,7 @@ async function sendEmail(amount, receipient) {
     }) 
   
     let info = await transporter.sendMail({
-      from: 'support@support@cryptocoinfx.co',
+      from: 'support@@cryptocoinfx.co',
       to: receipient,
       subject: "Transaction Approved",
       html: `<h3>${`
