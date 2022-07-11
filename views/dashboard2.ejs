@@ -1,0 +1,82 @@
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper ">
+
+        <div class="container-fluid" 
+        style="
+             background-color: #011F4B!important;
+             border-radius: 20px;
+             color: white;
+             width: 80%;
+             margin: 2em auto;
+             padding: 2em .5em;
+             text-align: center;
+        "
+        >
+            <div>
+                <h2 style="text-transform: uppercase;">Account needs to be upgraded</h2>
+                <h4>Reach out to our customer service to get your account upgraded.</h4>
+            </div>
+        </div>
+
+        <div style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 10000;
+        ">
+
+        </div>
+    
+        <!-- top tiles -->
+               <div class="container-fluid" style="background: #04396D;">
+               <div class="row tile_count">
+                 <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2">
+                 <div class="card p-3 bg-navy">
+                   <span class="count_top"><i class="fa fa-money"></i> Balance</span>
+                   <div class="count" style=""><%=req.user.currency%> <%= req.user.balance.toFixed(2) %></div>
+                   <span class="count_bottom"><i class="text-success">Available </i> Balance</span>
+                   </div>
+                 </div>
+                 <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2">
+                  <div class="card p-3 bg-secondary">
+                   <span class="count_top"><i class="fa fa-clock-o"></i> Invested</span>
+                   <div class="count" style=""><%=req.user.currency%> <%= req.user.invested.toFixed(2) %></div>
+                   <span class="count_bottom"><i class="text-warning"><i class="fa fa-sort-asc"></i>Trade</i> Ongoing</span>
+                   </div>
+                 </div>
+                 <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2">
+                  <div class="card p-3 bg-navy">
+                   <span class="count_top"><i class="fa fa-shield"></i> Account Type</span>
+                   <div class="count text-success bolder" style="font-weight: bolder;"> <%= req.user.account_type %> </div>
+                   <span class="count_bottom"><i class="text-success"><i class="fa fa-sort-asc"></i>Trade </i> Account Type</span>
+                   </div>
+                 </div>
+                <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2">
+                  <div class="card p-3 bg-navy">
+                   <span class="count_top"><i class="fa fa-arrow-down"></i> Total Withdrawals</span>
+                   <div class="count" style=""><%=req.user.currency%> <%= req.user.total_withdraw.toFixed(2) %></div>
+                   <span class="count_bottom"><i class="text-success"><i class="fa fa-sort-asc"></i>Withdrawals </i> </span>
+                   </div>
+                 </div>
+                 <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2" style="border-right: 0;">
+                  <div class="card p-3 bg-dark">
+                   <span class="count_top"><i class="fa fa-credit-card"></i> Total Profit</span>
+                   <div class="count"><%=req.user.currency%> <%= req.user.total_profit.toFixed(2) %></div>
+                   <span class="count_bottom"><i class="text-success"><i class="fa fa-sort-asc"></i>32% </i> From last Week</span>
+                   </div>
+                 </div>
+               </div>
+               </div>
+     
+
+
+  </div>
+</div>
+
+
+     
+     
+     
+     
